@@ -1,0 +1,334 @@
+/* css-reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* tambahkan-font */
+@font-face {
+    font-family: 'latobold';
+    src: url('../font/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunitoregular';
+    src: url('../font/nunito-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunitobold';
+    src: url('../font/nunito-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../font/OpenSans-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* edit-keseluruhan */
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: arial;
+    background-color: ghostwhite;
+    color: black;
+    position: relative;
+}
+
+/* edit-header */
+header {
+    background-color: black; 
+    box-sizing: border-box;
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1;
+}
+
+header h1 {
+    margin-left: 122px;
+    float: left;
+    font-size: 64px;
+    font-family: "latobold" ; 
+    letter-spacing: 11px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav li:first-child {
+    margin-left: 400px;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 36px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.8;
+    font-family: "nunitoregular";
+    box-sizing: border-box;
+    padding: 50px 20px;
+}
+
+header nav a:hover{
+    color:black;
+    background-color: white;
+}
+
+/* edit-hero-image */
+.hero {
+    background-image: url(../image/coding.jpg);
+    height: 676px;
+    width: 100%;
+    margin-top: -806px;
+    background-size: cover;
+    background-position: 0 -140px;
+    position: absolute;
+
+}
+
+.hero .profile {
+    background-color: grey;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.hero .profile img {
+    width: 350px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    font-family: "open_sansbold";
+    text-transform: uppercase;
+}
+
+/* edit-content */
+.skill {
+    margin-top: 920px;
+    height: 716px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill p {
+    font-size: 96px;
+    margin-top: 200px;
+    margin-bottom: 73px;
+    text-transform: uppercase;
+    font-family: "nunitobold";
+}
+
+.skill img {
+    height: 358px;
+
+}
+
+.project {
+    margin-top: 670px;
+    margin-bottom: 412px;
+    height: 670px;
+}
+
+.project p{
+    font-size: 96px;
+    text-align: center; 
+    margin: 200px 0 105px 0;
+    text-transform: uppercase;
+    font-family: "nunitobold";
+}
+
+
+.project .gallery {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    display: grid; 
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-template-columns: repeat(3,350px);
+    row-gap: 46px;
+}
+
+.project .gallery .kotak{
+    width: 350px;
+    height: 196px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top:1px;
+    opacity: 0;
+}
+
+.project .gallery .kotak-usa{
+    width: 350px;
+    height: 196px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 248px;
+    opacity: 0;
+}
+
+
+.project .gallery .kotak, .kotak-usa .icon{
+    width: 350px;
+    height: 196px;
+    background-repeat: no-repeat;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+.project .gallery a:hover .kotak{
+    opacity: 1;
+    animation: fade 0.7s;
+}
+
+.project .gallery a:hover .kotak-usa{
+    opacity: 1;
+    animation: fade 0.7s;
+}
+
+.project img {
+    width: 350px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.4);
+}
+
+/* edit-footer */
+footer {
+    background-color: black;
+    height: 346px;
+    width: 100%;
+    margin-top: 200px;
+}
+
+footer .sosmed {
+    float: left;
+    margin: 50px 0 0 130px;
+}
+
+footer .sosmed p {
+    font-size: 48px;
+    padding-bottom: 35px;
+    font-family: "open_sansbold";
+    color: white;
+}
+
+footer .contact {
+    margin: 50px 0 0 750px;
+}
+
+footer .contact .singapura {
+    font-size: 48px;
+    display: inline-block;
+    font-family: "open_sansbold";
+    margin-bottom: 35px;
+    color: white;
+}
+
+footer .contact .usa {
+    font-size: 35px;
+    font-family: "latobold";
+    margin-top: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+footer .contact .england {
+    font-size: 35px;
+    font-family: "latobold";
+    margin-top: -100px;
+    margin-left: 76px;
+    color: white;
+}
+
+footer .contact span {
+    display: inline;
+}
+
+footer .contact .whatsapp {
+    display: flex;
+    text-align: center;
+}
+
+footer .contact .email {
+    display: block;
+}
+
+footer .iconify {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+footer a {
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* clear */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
